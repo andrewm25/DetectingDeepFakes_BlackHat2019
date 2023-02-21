@@ -5,7 +5,8 @@ USER root
 ## os dependencies
 RUN apt-get --allow-releaseinfo-change update &&\
     apt-get install -y build-essential jq &&\
-    pip install yq
+    pip install yq &&\
+    export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
 ## Environment var config
 ENV CONDA_DIR /opt/conda

@@ -5,7 +5,7 @@ dependencies:
 - pyviz/label/dev::hvplot=0.4.0
 - pip
 - pip:
-    - tensorflow==2.0.0-beta1
+    - tensorflow==2.0.0
     - stingray
     - sklearn
     - jupyter

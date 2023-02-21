@@ -13,3 +13,4 @@ dependencies:
     - ipython
     - matplotlib
     - nbformat
+    - protobuf==3.20.*

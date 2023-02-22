@@ -28,5 +28,7 @@ RUN bash -c "source activate $(cat $ENVIRONMENT | yq -r .name ) &&\
                                          --name $(cat $ENVIRONMENT | yq -r .name ) \
                                          --display-name $(cat $ENVIRONMENT | yq -r .name )"
 
+ADD samples /mnt/samples
+
 ## Final user setup
 CMD ["bash", "-ic", "source activate $(cat $ENVIRONMENT | yq -r .name ) && jupyter notebook --notebook-dir=/mnt --ip=0.0.0.0 --no-browser --port=8888 --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --allow-root"]
